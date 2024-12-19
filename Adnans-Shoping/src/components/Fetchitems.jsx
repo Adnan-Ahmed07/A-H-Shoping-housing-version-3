@@ -13,7 +13,7 @@ const FetchItems=()=>{
     const controller=new AbortController();
     const signal=controller.signal;
     dispatch(fetchStatusAction.markFetchingStarted());
-    fetch("http://localhost:8080/items",{signal})
+    fetch("https://a-h-version-3-website-default-rtdb.firebaseio.com/.json",{signal})
     .then(res => res.json())
     
     .then(({items})=>{
